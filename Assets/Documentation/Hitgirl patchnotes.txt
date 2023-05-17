@@ -1,0 +1,85 @@
+HITGIRL
+
+A slower paced stealth game in the vein of Hitman, starring a female lead.
+
+You are a professional assassin. You kill for money.
+
+ - mildly erotic. main character is the titular Hit girl.
+ - fit. lean. serious. deadpan. 
+
+- specialises in female-centric targets for assassination.
+
+
+- vetinarian clinic (tutorial)
+
+- all-female boarding school..
+
+- nunnery
+
+- bank
+
+- 
+
+
+"what comes after asphyx-seven? asphyxiate!" 
+
+09/05/2022
+
+1.0
+
+-- created StatsBase.cs. Every Character has HP, a Suspicion Level, Movement Speed. Every Character belongs to a Character Class to later determine their AI-- Target, Enemy and Neutral. Every Character wears Clothes. Disabling or killing a Character allows the Player to switch Clothes with them. 
+
+-- added NPC.cs and hooked up StatsBase.cs
+
+TO DO:
+
+-- Movement
+-- Levels
+-- 3D Models
+-- AI
+-- Main Menu
+-- Load scenes
+-- SFX
+--  
+
+1.1
+
+-- began visualising level within Unity... 
+
+VET CLINIC
+
+Neutral NPC -- Civilians, Cats, Birds, Vet nurse
+
+Enemy -- Policeman (nearby in police car and donut shop, will spawn more for backup), Dogs (in cages or asleep, not a threat in this level)
+
+Target -- Vet (walks between Vet clinic and his house out back. his wife also lingers in the back) (has a beer or wine at all times)
+
+TO DO:
+
+-- Car models
+
+-- Dog models
+
+-- added a "isRun" bool and input so the Player can run. Running increases moveSpeed, but will also draw attention to yourself
+
+-- added "isArmed" for when the Player has drawn their weapon. holding a weapon draws attention to yourself. added "isAiming" for when the Player is aiming. aiming slows your movement and draws even more attention. added "fire1" functionality. Left clicking fires the Player's equipped weapon
+
+-- added "sussLevel" to help AI detect the Player's shifty movement. Performing certain actions increases your suss multiplyer
+
+-- added WeaponsBase.cs for making Weapons (such as guns) Scriptable Objects. Weapons have Name, maximum Ammo, Damage, Fire Rate and Reload time values
+
+-- added rudimentary third person camera and movement using https://www.youtube.com/watch?v=4HpC--2iowE
+
+1.2
+
+-- added description and melee to WeaponBase. All weapons have a text description, and are 
+
+--
+
+1.3
+
+-- updated Weapon script with additional logic. Added Shooting and Reloading and Holstering/Unholstering logic. The Player presses "H" to holster or unholster their weapon. Left click shoots, or if the current weapon is holstered, unholsters the weapon.
+
+-- Weapon script now interacts with Player in a number of ways. Eg, when shooting changes Player's status to shooting, etc. Status effects sus levels and will effect animations. 
+
+-- Added WeaponType to WeaponsBase. WeaponType effects animations and suslevel. For example a handgun confers less attention than a large rifle.
